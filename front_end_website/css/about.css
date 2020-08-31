@@ -1,0 +1,49 @@
+/* Body */
+body {
+  background-color: white;
+}
+
+div{
+  background-repeat: no-repeat;
+}
+
+.mb-2{
+    color:black;
+}
+
+.mb-4{
+    color:black;
+}
+
+.p {
+    color:black;
+}
+
+/* Footer */
+  #footer-background {
+    background-color:#242424;
+  }
+
+  .col-md {
+    margin: 30px;
+  }
+
+  .ftco-heading-2 {
+    color:#D3D3D3;
+  }
+
+  .py-2 {
+    color:#D3D3D3;
+  }
+
+  .text {
+    color:#D3D3D3;
+  }
+
+  #list {
+     color:#D3D3D3;
+  }
+
+  .row {
+    color:white;
+  }

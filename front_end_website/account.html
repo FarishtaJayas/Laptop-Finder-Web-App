@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>My Account</title>
+        <link rel="shortcut icon" href="img/logo.png">
+        <style type="text/css">
+        body{ font: 23px sans-serif; text-align: center; }
+        </style>
+
+<!-- CSS Codes -->
+<style>
+  /* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Left form */
+.left {
+  left: 0;
+  background-color: black;
+}
+/* Left form */
+
+/* Right form */
+.right {
+  right: 0;
+  background-color: black;
+}
+/* Right form */
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+body{
+    text-align:center;
+}
+
+body .form_wrapper{
+
+    display:inline-block;
+    background-color: #303030;
+    border-radius: 5px;
+    border-style: groove;
+    height: auto;
+    padding: 15px 18px;
+    margin: 10% auto;
+    margin-left: auto;
+    margin-right: auto;
+} 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color:#B00000;
+  color:white;
+  padding: 16px 50px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head >
+
+<!-- Code for the left form starts here -->
+<body>
+
+  <div class="split left">
+  <div class="centered">
+    <div class = "form_wrapper">
+      <img src="img/signup.png" alt="Sign Up">
+    <p><h5 class="text" style="color:white">
+    Become a LaptopFinder Member</h5></p>
+   <p><h5 class="text"><a href="signup.html" style="color:#B00000">Sign Up</a></h5></p>
+   <p><h6 class="text" style="color:#989898">
+    LaptopFinder intermittently offers the hottest discounts, news on sales promotions, and the newest information on laptops.</h6></p>
+  </div>
+  </div>
+</div>
+<!-- Code for the left form ends here -->
+
+<!-- Code for the right form starts here -->
+<div class="split right">
+  <div class="centered">
+    <div class = "form_wrapper">
+    <h3 class="text" style="color:white">Account Login</h3>
+    <form action="login_handler.php"  method="post">
+    <p> <h6 class="text" style="color:#989898">Username: <input type="text" name="username"></p>
+    <p> <h6 class="text" style="color:#989898">Password: <input type="password" name="pwd1"></p>
+    <p><input type="submit" value="Log In"></p>
+    <p><h6 class="text" style="color:#989898">You can use the account and password below to log in directly as a member:</h6></p>
+    <ul class="list-unstyled" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <a href="#" class="fa fa-facebook fa-2x" style="color:slateblue"></a>
+     <a href="#" class="fa fa-google fa-2x" style="color:red"></a>
+     </ul>
+    </form>
+  </div>
+  </div>
+</div>
+<!-- Code for the right form ends here -->
+
+</html>

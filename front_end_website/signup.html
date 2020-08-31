@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Sign Up</title>
+        <link rel="shortcut icon" href="img/logo.png">
+        <style type="text/css">
+        body{ font: 23px sans-serif; text-align: center; }
+        </style>
+
+<style>
+
+/* CSS Codes */
+body{
+    background-color:black;
+    text-align:center;
+}
+body .form_wrapper{
+
+    display:inline-block;
+    background-color:#303030;
+    border-radius: 5px;
+    border-style: groove;
+    height: auto;
+    padding: 15px 18px;
+    margin: 10% auto;
+    margin-left: auto;
+    margin-right: auto;
+} 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color:#B00000;
+  color:white;
+  padding: 16px 50px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+
+<!-- Javascript code to check if password field value and confirm password field value are equal -->
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+    alert("You entered a valid password: " + form.pwd1.value);
+    return true;
+  }
+
+</script>
+<!-- Javascript code ends here -->
+
+<!-- Form code starts here -->
+<body>
+    <div class = "form_wrapper">
+    <h3 class="text" style="color:white">Sign Up</h3>
+    <form action="form_process.php"  method="post" >
+    <p class="text" style="color:#B00000">Username: <input type="text" name="username"></p>
+    <p class="text" style="color:#B00000">Password: <input type="password" name="pwd1"></p>
+    <p class="text" style="color:#B00000">Confirm Password: <input type="password" name="pwd2"></p>
+    <p><input type="submit" value="Sign Up"></p>
+    <p class="text" style="color:#989898">or</p>
+    <p><h6 class="text" style="color:orange">You can use the account and password below to log in directly as a member:</h6></p>
+    <ul class="list-unstyled" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <a href="#" class="fa fa-facebook fa-2x" style="color:slateblue"></a>
+     <a href="#" class="fa fa-google fa-2x" style="color:red"></a>
+     </ul>
+    </form>
+	</div>
+</body>
+<!-- Form code ends here -->
+
+</html>
